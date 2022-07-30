@@ -16,16 +16,16 @@
 //number divisible by 5 log 'buzz'
 //number divisible by 3 & 5 log 'fizzbuzz'
 
-for(let i = 0; i <= 100; i++){
-    console.log(i++)
-    if(i % 3 == 0) {
-    console.log(i,'fizz')
-    }
-   else if(i % 5 == 0){
-        console.log(i, 'buzz')
-    }
+// for(let i = 0; i <= 100; i++){
+//     console.log(i++)
+//     if(i % 3 == 0) {
+//     console.log(i,'fizz')
+//     }
+//    else if(i % 5 == 0){
+//         console.log(i, 'buzz')
+//     }
     
-} 
+// } 
 
 const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
 const sharky = ["Sharky", "shark", 20, "Left Coast"]
@@ -36,5 +36,8 @@ const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
 plantee[2] = 5001
 wolfy[3] = "Gotham City"
 dart.push = "Hawkins"
+wolfy[0] = "Gameboy"
 
+console.log(plantee)
+console.log(dart)
 console.log(wolfy)
