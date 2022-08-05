@@ -52,3 +52,26 @@ for (let Raphael of ninjaTurtle) {
     console.log(Raphael.toUpperCase())  // when using the 'for of' loop, we are iterating the array from Donatello to Michaelangelo
 
 } // when using the .toUpperCase with the loop we are capitalizing all letters for all elements 
+
+//Testing favMovies array 
+
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+console.log(favMovies.indexOf('Titanic')) // 8th index
+
+
+console.log(favMovies.sort()) // sorts all elements in the array into alphabetical order 
+
+const addMovie = favMovies.push('Guardians of the Galaxy')
+console.log(addMovie)
+console.log(favMovies)
+
+// Excited Kitten 
+
+for(i = 0; i <= 20; i++) {
+    if (i % 2 === 0) {
+        console.log(i +  "...human...why you taking pictures of me?...")
+    }
+    console.log( 'Love me pet me! HSSS!')
+}
+
