@@ -109,11 +109,11 @@ console.log(alienFleet);
 */
 
 function battle () {
-    for (let i = battleShip.firepower; i <= alienFleet.length; i++) {
-        if (i - alienFleet[1].hull <= 0) {
-            console.log("Damage Done. " + "You defeated " + `${alienFleet[0]}`)
-        } else if (i - alienFleet[1].hull >= 0) {
-            console.log("We Need To Fire Again!")
+    for (let i = 0; i <= alienFleet.length; i++) {
+        if (battleShip.firepower >= alienFleet[0].hull && battleShip.firepower <= 0) {
+            return battleShip.firepower - alienFleet[0].hull
+        } else if (battleShip.firepower <= alienFleet[0].hull >= 0) {
+            return battleShip.firepower - alienFleet[0].hull
         } else {
             
         } {
@@ -122,7 +122,6 @@ function battle () {
     }
 }
 battle();
-
 
 
   
