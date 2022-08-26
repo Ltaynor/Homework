@@ -96,7 +96,6 @@ alienFleet.push(
     alienShip4,
     alienShip5,
     alienShip6
-
 );
 
 console.log(battleShip); // just to make sure that I was moving in the right direction 
@@ -109,20 +108,31 @@ console.log(alienFleet);
 */
 
 function battle () {
-    for (let i = 0; i <= alienFleet.length; i++) {
-        if (battleShip.firepower >= alienFleet[0].hull && battleShip.firepower <= 0) {
-            return battleShip.firepower - alienFleet[0].hull
-        } else if (battleShip.firepower <= alienFleet[0].hull >= 0) {
-            return battleShip.firepower - alienFleet[0].hull
+    for (let i = 0; i < alienFleet.length; i++) {
+        if (battleShip.firepower >= alienFleet[i].hull && alienFleet[i].hull >= 0) {
+            let damage = battleShip.firepower - alienFleet[i].hull
+            console.log(battleShip.firepower - alienFleet[i].hull) 
+            console.log(alienFleet[i].hull, 'Before')
+            alienFleet[i].hull = alienFleet[i].hull - damage
+            console.log(alienFleet[i].hull, 'after')
+           // let input = prompt()
+           // console.log(input) //assign new variable for damage done. give prompt to continue to next ship 
+        } else if (battleShip.firepower < alienFleet[i].hull >= 0) {  // After we have attacked, if alienShip has not been destroyed then they now attack back. 
+            console.log(battleShip.firepower - alienFleet[i].hull)
         } else {
-            
-        } {
             console.log("you lost. " + "Try again")
-        }
+        } 
     }
 }
 battle();
 
-
+// function battle () {
+//     for (let i = 0; i <= alienFleet.length; i++) {
+//         while (let i = 0; i <= alienFleet.length; i++) {
+            
+//         }
+        
+//     }
+// }
   
   
