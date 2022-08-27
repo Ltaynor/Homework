@@ -110,13 +110,12 @@ console.log(alienFleet);
 function battle () {
     for (let i = 0; i < alienFleet.length; i++) {
         if (battleShip.firepower >= alienFleet[i].hull && alienFleet[i].hull >= 0) {
-            let damage = battleShip.firepower - alienFleet[i].hull
             console.log(battleShip.firepower - alienFleet[i].hull) 
+            let damage = battleShip.firepower - alienFleet[i].hull
             console.log(alienFleet[i].hull, 'Before')
             alienFleet[i].hull = alienFleet[i].hull - damage
-            console.log(alienFleet[i].hull, 'after')
-           // let input = prompt()
-           // console.log(input) //assign new variable for damage done. give prompt to continue to next ship 
+            let input = prompt('Fire Again?')                           // attempting to create a prompt that will pause after a alien ship has been damaged/destroyed ex: "yes or no"
+            console.log(input)              //assign new variable for damage done. give prompt to continue to next ship 
         } else if (battleShip.firepower < alienFleet[i].hull >= 0) {  // After we have attacked, if alienShip has not been destroyed then they now attack back. 
             console.log(battleShip.firepower - alienFleet[i].hull)
         } else {
@@ -126,13 +125,5 @@ function battle () {
 }
 battle();
 
-// function battle () {
-//     for (let i = 0; i <= alienFleet.length; i++) {
-//         while (let i = 0; i <= alienFleet.length; i++) {
-            
-//         }
-        
-//     }
-// }
   
   
