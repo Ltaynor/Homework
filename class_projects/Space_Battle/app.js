@@ -112,12 +112,14 @@ function battle () {
         if (battleShip.firepower >= alienFleet[i].hull && alienFleet[i].hull >= 0) {
             console.log(battleShip.firepower - alienFleet[i].hull) 
             let damage = battleShip.firepower - alienFleet[i].hull
-            console.log(alienFleet[i].hull, 'Before')
             alienFleet[i].hull = alienFleet[i].hull - damage
-            let input = prompt('Fire Again?')                           // attempting to create a prompt that will pause after a alien ship has been damaged/destroyed ex: "yes or no"
-            console.log(input)              //assign new variable for damage done. give prompt to continue to next ship 
-        } else if (battleShip.firepower < alienFleet[i].hull >= 0) {  // After we have attacked, if alienShip has not been destroyed then they now attack back. 
-            console.log(battleShip.firepower - alienFleet[i].hull)
+            let input = prompt('Alien Ship Has Been Destroyed, Attack Next Ship?')           // attempting to create a prompt that will pause after a alien ship has been damaged/destroyed ex: "yes or no"
+            console.log(input)                                                //assign new variable for damage done. give prompt to continue to next ship 
+        } else if (battleShip.firepower < alienFleet[i].hull >= 0) { 
+            let remainder = battleShip.firepower - damage
+            let input1 = prompt('Nice Shot, but The Ship is not destroyed. FIRE AGAIN!') 
+            console.log(input1)                                                  // After we have attacked, if alienShip has not been destroyed then they now attack back. 
+            console.log(remainder)
         } else {
             console.log("you lost. " + "Try again")
         } 
@@ -125,5 +127,6 @@ function battle () {
 }
 battle();
 
-  
-  
+// Added prompt, but now need to figure out how to add 
+
+battleShip.firepower - alienFleet[i].hull
