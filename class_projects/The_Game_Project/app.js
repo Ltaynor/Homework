@@ -51,10 +51,21 @@ const pickChoice = document.querySelector(".options")  // changed names in 'inde
 pickChoice.foreach(button => button.addeventlistener("click", () => {
 
 button.textContent;  // found on mozilla for connecting player one to his decisions https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
-
+playerOne.textContent = ${player}
+computerOne.textContent = 
 
 }))
 
 // need to figure out how to get button to click, need to also add math.random function for computer player 
+/* need to create if-else to check who wins between rock, paper and scissors
+using: rock beats scissors
+paper beats rock
+scissors beats paper
+*/
 
 
+
+function whoWins(){
+    if(playerOne == computerOne)
+
+}
