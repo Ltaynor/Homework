@@ -39,13 +39,22 @@ At the end the game will state whether "You Win" or "You Lose"
 
 // Starting with creating the characters Player 1 and computer player 
 
-let playerOne = document.querySelector("#player-1-container")
-let computerOne = document.querySelector("#computer-container")
-let gameChoices = ['rock', 'paper', 'scissors'];
-let pickChoice = document.querySelector()
+const playerOne = document.querySelector("#player-1-container")
+const computerOne = document.querySelector("#computer-container")
+const gameChoices = ['rock', 'paper', 'scissors'];
+const pickChoice = document.querySelector(".options")  // changed names in 'index' to options so that i could connect all 3 options 
 
 
 
 // adding an event listener that should be able to click on the buttons 
-pickChoice.foreach(button => button.addeventlistener("click", ))
+//also connecting the 'playerone' to my html so that when I click a certain button, it renders 
+pickChoice.foreach(button => button.addeventlistener("click", () => {
+
+button.textContent;  // found on mozilla for connecting player one to his decisions https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+
+
+}))
+
+// need to figure out how to get button to click, need to also add math.random function for computer player 
+
 

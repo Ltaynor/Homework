@@ -9,7 +9,8 @@ body{
   display: flex;
   flex-direction: row;
 }
-.player-2-container {
+.computer-container {
+  justify-content: center;
   display: flex;
   flex-direction: row-reverse;
   flex-basis: 200px;
